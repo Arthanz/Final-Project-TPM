@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GroupController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('welcome');
 });
+
+
+// Route::get('/create-group', function() {
+//     return view ('registerr');
+// });
+
+
+Route::get('create-group', [GroupController::class, 'create']);
+Route::post('store-group', [GroupController::class, 'store']);
+Route::get('group', [GroupController::class, 'index']);
