@@ -24,6 +24,6 @@ Route::get('/home', function () {
 // });
 
 
-Route::get('create-group', [GroupController::class, 'create']);
-Route::post('store-group', [GroupController::class, 'store']);
+Route::get('/create-group', [GroupController::class, 'create']);
+Route::post('/store-group', [GroupController::class, 'store']);
 Route::get('group', [GroupController::class, 'index']);
