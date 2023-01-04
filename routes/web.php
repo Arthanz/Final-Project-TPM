@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\GroupController;
 use Illuminate\Support\Facades\Route;
+use App\Models\group;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', function () {
-    return view('welcome');
+    $groups = group::all();
+    return view('home', compact('groups'));
 });
 
 
@@ -23,7 +26,7 @@ Route::get('/home', function () {
 //     return view ('registerr');
 // });
 
-
 Route::get('/create-group', [GroupController::class, 'create']);
 Route::post('/store-group', [GroupController::class, 'store']);
 Route::get('group', [GroupController::class, 'index']);
+Route::delete('/delete-group/{id}', [GameController::class, 'delete'])->name('delete');

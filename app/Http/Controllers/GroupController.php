@@ -53,4 +53,8 @@ class GroupController extends Controller
      */
         return redirect('/home');
     }
+    function delete($id){
+        Game::destroy($id);
+        return redirect()->to('/home');
+    }
 }
