@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('leader', function (Blueprint $table) {
+        Schema::create('leaders', function (Blueprint $table) {
             $table->id('Leader_ID');
             $table->timestamps();
             $table->string('name');
@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('Github_ID');
             $table->date('Birth_date');
             $table->string('Birth_place');
+            $table->string('cv');
         });
     }
 

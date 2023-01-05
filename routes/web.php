@@ -29,4 +29,6 @@ Route::get('/home', function () {
 Route::get('/create-group', [GroupController::class, 'create']);
 Route::post('/store-group', [GroupController::class, 'store']);
 Route::get('group', [GroupController::class, 'index']);
-Route::delete('/delete-group/{id}', [GameController::class, 'delete'])->name('delete');
+Route::delete('/delete-group/{id}', [GroupController::class, 'delete'])->name('delete');
+Route::get('/register-leader', 'App\Http\Controllers\LeaderController@createLeader');
+Route::post('/store-leader', 'App\Http\Controllers\LeaderController@storeLeader');

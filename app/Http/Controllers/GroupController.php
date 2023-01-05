@@ -13,6 +13,7 @@ class GroupController extends Controller
         return view('registerr');
     }
 
+
     /**
      * Store a newly created resource in storage.
      *
@@ -33,11 +34,6 @@ class GroupController extends Controller
                 'confirmed'
             ],
             'is_binusian'=>'required',],
-            [
-                'Group_name.required'=>'Group Name Is Required',
-                'Group_name.unique'=>'Group Name Has Been Taken',
-                'is_binusian.required'=>'Please tell us if you are Binusian or not'
-            ]
 
         ]);
         group::create([
@@ -54,7 +50,7 @@ class GroupController extends Controller
         return redirect('/home');
     }
     function delete($id){
-        Game::destroy($id);
+        group::destroy($id);
         return redirect()->to('/home');
     }
 }

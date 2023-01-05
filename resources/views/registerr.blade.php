@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,8 +23,8 @@
 					<div class="form-group">
 						<label for="Group_name" class="col-md-4 col-form-label text-md-right">Group Name</label>
 						<div class="col-md-6">
-						<input type="text" name="Group_name" class="form-control" placeholder="Group Name">
-						@error('Group_')
+						<input type="text" name="Group_name" class="form-control @error('Group_name') is-invalid @enderror" placeholder="Group Name">
+						@error('Group_name')
 						<span class="invalid-feedback" role="alert">
 							<strong>{{ $message }}</strong>
 						</span>
@@ -35,7 +36,7 @@
 					</div>
 					{{-- <input class="text" type="text" name="Group_name" placeholder="Group name" required=""> --}}
 					<div class="form-group row">
-						<label for="password" class="col-md-4 col-form-label text-md-right">Password</label>					
+						<label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
 						<div class="col-md-6">
 							<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 							@error('password')
@@ -44,9 +45,9 @@
 								</span>
 							@enderror
 						</div>
-					</div>					
+					</div>
 					<div class="form-group row">
-						<label for="password" class="col-md-4 col-form-label text-md-right">Confirm Password</label>					
+						<label for="password" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
 						<div class="col-md-6">
 							<input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password_confirmation" required autocomplete="current-password">
 						</div>
