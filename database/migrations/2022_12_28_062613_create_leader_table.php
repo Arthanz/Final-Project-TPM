@@ -24,6 +24,7 @@ return new class extends Migration
             $table->date('Birth_date');
             $table->string('Birth_place');
             $table->string('cv');
+            $table->string('card');
         });
     }
 

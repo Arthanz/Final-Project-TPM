@@ -23,14 +23,18 @@ class LeaderController extends Controller
             'Birth_date' => 'required|before:17 years ago',
             ['before' => 'You must be at least 17 years old'],
             'Birth_place'=>'required',
-            'cv'=>'required|mimes:jpg,png,jpeg'
+            'cv'=>'required|mimes:jpg,png,jpeg',
+            'card'=>'required|mimes:jpg,png,jpeg'
         ]);
 
 
         $extension = $request->file('cv')->getClientOriginalExtension();
         $filename = $request->file('cv')->getClientOriginalName();
-        $request->file('cv')->storeAs('/public/leaders/', $filename);
+        $request->file('cv')->storeAs('/public/leaders/cv', $filename);
 
+        $extension = $request->file('card')->getClientOriginalExtension();
+        $filename2 = $request->file('card')->getClientOriginalName();
+        $request->file('card')->storeAs('/public/leaders/card', $filename2);
         leader::create([
             'name'=> $request ->name,
             'email'=> $request -> email,
@@ -39,7 +43,8 @@ class LeaderController extends Controller
             'Github_ID'=> $request ->Github_ID,
             'Birth_date'=> $request -> Birth_date,
             'Birth_place'=> $request ->Birth_place,
-            'cv'=>$filename
+            'cv'=>$filename,
+            'card'=>$filename2
         ]);
 
         return redirect('/home');

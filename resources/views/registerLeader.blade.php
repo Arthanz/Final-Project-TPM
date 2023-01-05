@@ -49,6 +49,10 @@
           <label for="exampleInputPassword1" class="form-label">CV</label>
           <input type="file" class="form-control" id="exampleInputPassword1" name="cv"  value="{{old('cv')}}">
          </div>
+         <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Card</label>
+            <input type="file" class="form-control" id="exampleInputPassword1" name="card"  value="{{old('card')}}">
+           </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>

@@ -17,6 +17,7 @@ class leader extends Model
         'Github_ID',
         'Birth_date',
         'Birth_place',
-        'cv'
+        'cv',
+        'card'
     ];
 }
