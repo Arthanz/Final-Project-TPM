@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('Github_ID');
             $table->date('Birth_date');
             $table->string('Birth_place');
+            $table->string('cv');
+            $table->string('card');
         });
     }
 

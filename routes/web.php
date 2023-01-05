@@ -32,3 +32,5 @@ Route::get('group', [GroupController::class, 'index']);
 Route::delete('/delete-group/{id}', [GroupController::class, 'delete'])->name('delete');
 Route::get('/register-leader', 'App\Http\Controllers\LeaderController@createLeader');
 Route::post('/store-leader', 'App\Http\Controllers\LeaderController@storeLeader');
+Route::get('/register-member', 'App\Http\Controllers\MemberController@createMember');
+Route::post('/store-member', 'App\Http\Controllers\MemberController@storeMember');
