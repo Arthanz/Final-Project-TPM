@@ -39,22 +39,6 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
-        <div class="mt-4" style="display: flex; flex-direction: row; flex-wrap: wrap; margin-bottom: 20px;">
-            <div class="float-container">
-                <div class="float-child">
-                    <x-input-label for="is_binusian" :value="__('Binusian')" />
-                    <x-text-input id="is_binusian"  type="radio" name="is_binusian" :value=1 required />
-                    <x-input-error :messages="$errors->get('is_binusian')" class="mt-2" />
-                </div>
-                <div class="float-child">
-                    <x-input-label for="is_binusian" :value="__('Not Binusian')" />
-                    <x-text-input id="is_binusian"  type="radio" name="is_binusian" :value=0 required />
-                    <x-input-error :messages="$errors->get('is_binusian')" class="mt-2" />
-                </div>
-            </div>
-
-        </div>
-
         <div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
