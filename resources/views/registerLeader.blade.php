@@ -55,5 +55,6 @@
            </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <form action="/register" class="mt-4"><button type="submit" class="btn btn-primary"> Back </button></form>
 </div>
   @endsection

@@ -21,7 +21,15 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'is_binusian'
+        'is_binusian',
+        'leader_name',
+        'leader_WA_Number',
+        'leader_Line_ID',
+        'leader_Github_ID',
+        'leader_Birth_date',
+        'leader_Birth_place',
+        'leader_cv',
+        'leader_card'
     ];
 
     /**

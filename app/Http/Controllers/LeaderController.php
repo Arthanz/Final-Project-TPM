@@ -47,7 +47,7 @@ class LeaderController extends Controller
             'card'=>$filename2
         ]);
 
-        return redirect('/home');
+        return redirect('/dashboard');
     }
 
 }

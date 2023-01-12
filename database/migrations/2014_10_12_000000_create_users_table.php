@@ -22,7 +22,14 @@ return new class extends Migration
             $table->boolean('is_binusian');
             $table->rememberToken();
             $table->timestamps();
-
+            $table->string('leader_name');
+            $table->string('leader_WA_Number');
+            $table->string('leader_Line_ID');
+            $table->string('leader_Github_ID');
+            $table->date('leader_Birth_date');
+            $table->string('leader_Birth_place');
+            $table->string('leader_cv');
+            $table->string('leader_card');
         });
     }
 
