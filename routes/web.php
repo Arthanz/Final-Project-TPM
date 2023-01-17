@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\GroupController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +32,9 @@ Route::get('/register-leader', 'App\Http\Controllers\LeaderController@createLead
 Route::post('/store-leader', 'App\Http\Controllers\LeaderController@storeLeader');
 Route::get('/register-member', 'App\Http\Controllers\MemberController@createMember');
 Route::post('/store-member', 'App\Http\Controllers\MemberController@storeMember');
+Route::get('/dashboardGroup', 'App\Http\Controllers\DashboardController@index');
+Route::get('/paymentInput', 'App\Http\Controllers\PaymentController@create');
+Route::post('/storePayment', 'App\Http\Controllers\PaymentController@store');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

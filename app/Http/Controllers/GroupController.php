@@ -51,6 +51,6 @@ class GroupController extends Controller
     }
     function delete($id){
         group::destroy($id);
-        return redirect()->to('/home');
+        return redirect('/home');
     }
 }

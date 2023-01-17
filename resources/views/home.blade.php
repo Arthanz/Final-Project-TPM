@@ -4,7 +4,7 @@
 
 @section ('content')
 <div class="d-flex m-5">
-    @foreach ($groups as $g)
+    @foreach ($group as $g)
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">{{$g->Group_name}}</h5>
