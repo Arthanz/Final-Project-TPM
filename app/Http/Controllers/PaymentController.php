@@ -50,7 +50,7 @@ class PaymentController extends Controller
             'paymentProof'=>$filename
         ]);
 
-        return redirect('/paymentInput');
+        return redirect('/paymentVerif');
     }
 
     /**
