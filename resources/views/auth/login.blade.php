@@ -1,3 +1,9 @@
+<link rel="stylesheet" href="loginv2-style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="container">
+    <h2 class="t-center">Selamat Datang !</h2>
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -6,14 +12,16 @@
         @csrf
 
         <!-- Email Address -->
-        <div>
-            <x-input-label for="name" :value="__('name')" />
+        <div class="inputDiv">
+            <x-input-label for="name" :value="__('name')" class="username" />
+            <div class="userArea">
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+            </div>
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
         <!-- Password -->
-        <div class="mt-4">
+        <div class="mt-4 inputDiv" >
             <x-input-label for="password" :value="__('Password')" />
 
             <x-text-input id="password" class="block mt-1 w-full"
@@ -45,3 +53,4 @@
         </div>
     </form>
 </x-guest-layout>
+</div>

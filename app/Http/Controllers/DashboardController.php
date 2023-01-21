@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\group;
+use App\Models\member;
 use App\Models\leader;
 
 class DashboardController extends Controller
@@ -17,7 +18,8 @@ class DashboardController extends Controller
     {
         $group = group::all();
         $leader = leader::all();
-        return view('showDashboard', compact('group'), compact('leader'));
+        $member = member::all();
+        return view('showDashboard', compact('group'), compact('leader', 'member'));
         // return view('showDashboard');
         
     }
